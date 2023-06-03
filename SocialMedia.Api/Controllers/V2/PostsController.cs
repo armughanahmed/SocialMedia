@@ -2,9 +2,10 @@
 using Microsoft.AspNetCore.Mvc;
 using SocialMedia.Domain.Models;
 
-namespace SocialMedia.Api.Controllers
+namespace SocialMedia.Api.Controllers.V2
 {
-    [Route("api/[controller]")]
+    [ApiVersion("2.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class PostsController : Controller
     {
@@ -15,7 +16,7 @@ namespace SocialMedia.Api.Controllers
             var post = new Post
             {
                 Id = id,
-                Text = "Hello World!",
+                Text = "Hello V2!",
             };
 
             return Ok(post);
