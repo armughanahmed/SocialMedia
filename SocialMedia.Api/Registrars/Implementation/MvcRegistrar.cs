@@ -1,11 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc.Versioning;
-using Microsoft.AspNetCore.Mvc;
-using SocialMedia.Api.Registrars.Interface;
-
-namespace SocialMedia.Api.Registrars.Implementation
+﻿namespace SocialMedia.Api.Registrars.Implementation
 {
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Versioning;
+    using SocialMedia.Api.Registrars.Interface;
+
+    /// <summary>
+    /// Register .net core MVC Services
+    /// </summary>
     public class MvcRegistrar : IWebApplicationBuilderRegistrar
     {
+        /// <summary>
+        /// Register MVC Services by taking WebApplicationBuilder Object
+        /// </summary>
+        /// <param name="builder"><see cref="WebApplicationBuilder"/></param>
         public void RegisterServices(WebApplicationBuilder builder)
         {
             builder.Services.AddControllers();

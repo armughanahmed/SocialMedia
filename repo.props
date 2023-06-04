@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup>
+    <Authors>Armughan Ahmed</Authors>
+    <Product>SocialMedia</Product>
+    <RepositoryUrl></RepositoryUrl>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);SA1633</NoWarn>
+    <NoWarn>$(NoWarn);SA1629</NoWarn>
+    <NoWarn>$(NoWarn);SA1309</NoWarn>
+    <NoWarn>$(NoWarn);SA1101</NoWarn>
+    <NoWarn>$(NoWarn);SA1000</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnvironmentName>Development</EnvironmentName>
+  </PropertyGroup>
+</Project>
