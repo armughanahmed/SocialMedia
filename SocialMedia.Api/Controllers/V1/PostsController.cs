@@ -1,7 +1,6 @@
 ﻿namespace SocialMedia.Api.Controllers.V1
 {
     using Microsoft.AspNetCore.Mvc;
-    using SocialMedia.Domain.Models;
 
     /// <summary>
     /// Controller Responsible For Posts Domain
@@ -15,18 +14,12 @@
         /// Fetches Post By Unique Id
         /// </summary>
         /// <param name="id">Post's Unique Id</param>
-        /// <returns>Post<see cref="Post"/></returns>
+        /// <returns>V1</returns>
         [HttpGet]
         [Route("{id}")]
         public IActionResult GetById(int id)
         {
-            var post = new Post
-            {
-                Id = id,
-                Text = "Hello V1!",
-            };
-
-            return Ok(post);
+            return Ok("Hello V1");
         }
     }
 }
