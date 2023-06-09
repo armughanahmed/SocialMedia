@@ -31,6 +31,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Dal\SocialMedia.Dal.csproj" />
 		<ProjectReference Include="..\SocialMedia.Domain\SocialMedia.Domain.csproj" />
 	</ItemGroup>
 
