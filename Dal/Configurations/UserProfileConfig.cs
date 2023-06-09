@@ -18,7 +18,7 @@
         /// <inheritdoc/>
         public void Configure(EntityTypeBuilder<UserProfile> builder)
         {
-            builder.HasKey(x => x.BasicInfo);
+            builder.OwnsOne(x => x.BasicInfo);
         }
     }
 }
