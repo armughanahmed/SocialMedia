@@ -2,6 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using SocialMedia.Api.Registrars.Interface;
+    using SocialMedia.Dal;
 
     /// <summary>
     /// Registers EF Core services
@@ -14,7 +15,7 @@
             var connectionString = builder.Configuration.GetConnectionString("Default");
 
             // Registering Db Context
-            builder.Services.AddDbContext<DbContext>(options => options.UseSqlServer(connectionString));
+            builder.Services.AddDbContext<SocialMediaContext>(options => options.UseSqlServer(connectionString));
         }
     }
 }

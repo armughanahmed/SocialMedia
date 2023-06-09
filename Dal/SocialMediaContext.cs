@@ -14,13 +14,13 @@
     /// <summary>
     /// Database Context Class
     /// </summary>
-    public class DbContext : IdentityDbContext
+    public class SocialMediaContext : IdentityDbContext
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DbContext"/> class for using options.
+        /// Initializes a new instance of the <see cref="SocialMediaContext"/> class for using options.
         /// </summary>
         /// <param name="options">dbcontext options</param>
-        public DbContext(DbContextOptions options)
+        public SocialMediaContext(DbContextOptions options)
             : base(options)
         {
         }
