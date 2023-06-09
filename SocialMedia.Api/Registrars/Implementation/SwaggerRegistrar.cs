@@ -8,10 +8,7 @@
     /// </summary>
     public class SwaggerRegistrar : IWebApplicationBuilderRegistrar
     {
-        /// <summary>
-        /// Registers Swagger Services
-        /// </summary>
-        /// <param name="builder"><see cref="WebApplicationBuilder"/></param>
+        /// <inheritdoc/>
         public void RegisterServices(WebApplicationBuilder builder)
         {
             builder.Services.AddSwaggerGen();
