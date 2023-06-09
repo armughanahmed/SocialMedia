@@ -7,6 +7,7 @@
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
+    using SocialMedia.Dal.Configurations;
     using SocialMedia.Domain.Aggregates.PostAggregate;
     using SocialMedia.Domain.Aggregates.UserProfileAggregate;
 
@@ -37,7 +38,12 @@
         /// <inheritdoc/>
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            // Method intentionally left empty.
+            builder.ApplyConfiguration(new PostCommentConfig());
+            builder.ApplyConfiguration(new PostInteractionConfig());
+            builder.ApplyConfiguration(new UserProfileConfig());
+            builder.ApplyConfiguration(new IdentityUserLoginConfig());
+            builder.ApplyConfiguration(new IdentityUserRoleConfig());
+            builder.ApplyConfiguration(new IdentityUserTokenConfig());
         }
     }
 }
