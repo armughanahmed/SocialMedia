@@ -8,10 +8,7 @@
     /// </summary>
     public class MvcWebAppRegistrar : IWebApplicationRegistrar
     {
-        /// <summary>
-        /// Registers .net core MVC Pipelines
-        /// </summary>
-        /// <param name="app"><see cref="WebApplication"/></param>
+        /// <inheritdoc/>
         public void RegisterPipelineComponents(WebApplication app)
         {
             app.UseSwagger();

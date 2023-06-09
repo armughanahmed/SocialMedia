@@ -9,10 +9,7 @@
     /// </summary>
     public class MvcRegistrar : IWebApplicationBuilderRegistrar
     {
-        /// <summary>
-        /// Register MVC Services by taking WebApplicationBuilder Object
-        /// </summary>
-        /// <param name="builder"><see cref="WebApplicationBuilder"/></param>
+        /// <inheritdoc/>
         public void RegisterServices(WebApplicationBuilder builder)
         {
             builder.Services.AddControllers();
