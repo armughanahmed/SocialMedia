@@ -6,7 +6,7 @@
     /// Controller Responsible For Posts Domain
     /// </summary>
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route(ApiRoutes.BaseRoute)]
     [ApiController]
     public class PostsController : Controller
     {
@@ -16,7 +16,7 @@
         /// <param name="id">Post's Unique Id</param>
         /// <returns>V1</returns>
         [HttpGet]
-        [Route("{id}")]
+        [Route(ApiRoutes.Posts.GetById)]
         public IActionResult GetById(int id)
         {
             return Ok("Hello V1");
