@@ -7,7 +7,7 @@
     using System.Threading.Tasks;
 
     /// <summary>
-    /// BasicInfo contains basic information about the user
+    /// BasicInfo is a record that contains basic information about the user
     /// </summary>
     public class BasicInfo
     {
@@ -55,7 +55,7 @@
         /// <param name="dateOfBirth">Date Of Birth</param>
         /// <param name="currentCity">Current City</param>
         /// <returns>Basic Information <see cref="BasicInfo"/></returns>
-        public static BasicInfo CreateBasicInfo(string firstName, string lastName, string emailAddress, string phone, DateTime dateOfBirth, string currentCity)
+        public static BasicInfo CreateBasicInfo(string firstName, string lastName, string emailAddress, string phone, DateTime? dateOfBirth, string currentCity)
         {
             // TO DO: add Validation, error handling strategies, error notification strategies.
             return new BasicInfo

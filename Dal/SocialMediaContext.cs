@@ -26,14 +26,14 @@
         }
 
         /// <summary>
-        /// Gets or sets UserProfile DbContext
+        /// Gets UserProfile DbContext
         /// </summary>
-        public DbSet<UserProfile>? UserProfiles { get; set; }
+        public DbSet<UserProfile> UserProfiles => this.Set<UserProfile>();
 
         /// <summary>
-        /// Gets or sets Posts DbContext
+        /// Gets Posts DbContext
         /// </summary>
-        public DbSet<Post>? Posts { get; set; }
+        public DbSet<Post> Posts => this.Set<Post>();
 
         /// <inheritdoc/>
         protected override void OnModelCreating(ModelBuilder builder)
